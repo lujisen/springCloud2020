@@ -1,0 +1,4 @@
+com\ljs\springcloud\config\ApplicationContextConfig.class
+com\ljs\springcloud\controller\OrderController.class
+com\ljs\ribbonRule\MySelfRule.class
+com\ljs\springcloud\OrderMain8081.class

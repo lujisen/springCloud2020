@@ -1,0 +1,43 @@
+server:
+  port: 2003
+
+spring:
+  application:
+    name: seata-account-service
+  cloud:
+    alibaba:
+      seata:
+        tx-service-group: my_test_tx_group
+        config:
+          type: nacos
+          nacos:
+            namespace:
+            serverAddr: 127.0.0.1:8848
+            group: SEATA_GROUP # 这个值未生效, 在nacos中依然为DEFAULT_GROUP, 待检查原因
+          registry:
+            type: nacos
+            nacos:
+              application: serverAddr
+              # seata 在nacos中的服务名
+              serverAddr: 127.0.0.1:8848
+              # 分组需和seate分组一致
+              group: SEATA_GROUP
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        group: SEATA_GROUP
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.0.111:3306/seata_account
+    username: root
+    password: 123456a?
+
+logging:
+  level:
+    io:
+      seata: info
+
+mybatis:
+  mapperLocations: classpath:mapper/*.xml
+
+

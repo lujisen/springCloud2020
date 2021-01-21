@@ -1,0 +1,5 @@
+com\ljs\springcloud\service\PaymentFallbackService.class
+com\ljs\springcloud\service\PaymentService.class
+com\ljs\springcloud\config\ApplicationContextConfig.class
+com\ljs\springcloud\OrderNacosMain8084.class
+com\ljs\springcloud\controller\CircleBreakerController.class
